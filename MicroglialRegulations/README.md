@@ -45,9 +45,9 @@ A major goal of the notebook is to move beyond looking only at peak NF-κB activ
 
 In microglia, inflammatory burden is not determined solely by how high NF-κB rises at its maximum. It also depends on:
 
-- how long NF-κB stays elevated
-- how much total NF-κB activity accumulates over time
-- whether the response relaxes back toward baseline or remains persistently active
+- How long NF-κB stays elevated
+- How much total NF-κB activity accumulates over time
+- Whether the response relaxes back toward baseline or remains persistently active
 
 To capture that, the notebook defines an **inflammation index** from the simulated nuclear NF-κB trajectory.
 
@@ -77,10 +77,10 @@ The index combines two biologically relevant ideas:
 
 This is useful because a signaling trace can have:
 
-- a high peak but short duration
-- a moderate peak but long persistence
-- strong adaptation with little late activity
-- weak adaptation with prolonged inflammatory exposure
+- A high peak but short duration
+- A moderate peak but long persistence
+- Strong adaptation with little late activity
+- Weak adaptation with prolonged inflammatory exposure
 
 The inflammation index gives a single summary value that reflects both overall burden and persistence.
 
@@ -102,10 +102,10 @@ The notebook simulates a transient TNF pulse by changing the model parameter `TN
 
 In the inflammation-index scans, the default settings are:
 
-- simulation end time: `6500` seconds
-- number of time points: `4001`
+- Simulation end time: `6500` seconds
+- Number of time points: `4001`
 - TNF pulse turned off at: `3600` seconds
-- plateau tail fraction: `0.10`
+- Plateau tail fraction: `0.10`
 
 ---
 
@@ -133,10 +133,10 @@ The notebook creates inflammation-index heat maps for these parameter pairs:
 
 In general:
 
-- movement toward lower color values means lower predicted inflammatory burden
-- strong horizontal gradients indicate a large effect of `k_cyld`
-- strong vertical gradients indicate a large effect of the A20-related parameter on the y-axis
-- diagonal gradients indicate that both parameters contribute substantially
+- Movement toward lower color values means lower predicted inflammatory burden
+- Strong horizontal gradients indicate a large effect of `k_cyld`
+- Strong vertical gradients indicate a large effect of the A20-related parameter on the y-axis
+- Diagonal gradients indicate that both parameters contribute substantially
 
 ---
 
@@ -220,9 +220,9 @@ Then open:
 
 Run the notebook from top to bottom so that:
 
-- the model is loaded first
-- helper functions are defined
-- the figures are generated in sequence
+- The model is loaded first
+- Helper functions are defined
+- The figures are generated in sequence
 
 ---
 
@@ -285,10 +285,10 @@ You would then stitch the two segments, compute the inflammation index, and stor
 
 If you describe this metric in a manuscript, it is helpful to note that:
 
-- it is a model-derived proxy, not a direct experimental assay
-- the weights 0.70 and 0.30 are chosen to emphasize cumulative exposure while still retaining sensitivity to persistence
-- different weighting schemes could be tested in future work
-- the metric is useful for comparing simulated conditions within this model framework
+- It is a model-derived proxy, not a direct experimental assay
+- The weights 0.70 and 0.30 are chosen to emphasize cumulative exposure while still retaining sensitivity to persistence
+- Different weighting schemes could be tested in future work
+- The metric is useful for comparing simulated conditions within this model framework
 
 Example:
 
@@ -300,13 +300,13 @@ Example:
 
 You can adapt the notebook by:
 
-- changing the TNF pulse duration
-- changing the simulation length
-- changing the inflammation index weights
-- using a different plateau tail fraction
-- scanning more parameters at once
-- saving the heat map arrays to disk
-- exporting figures at higher resolution for publication
+- Changing the TNF pulse duration
+- Changing the simulation length
+- Changing the inflammation index weights
+- Using a different plateau tail fraction
+- Scanning more parameters at once
+- Saving the heat map arrays to disk
+- Exporting figures at higher resolution for publication
 
 Examples:
 
@@ -323,7 +323,7 @@ Examples:
 If you get an error when loading the model, check that:
 
 - `LipniackiWithCYLD.xml` is in the same folder as the notebook
-- you launched Jupyter from the correct directory
+- You launched Jupyter from the correct directory
 
 ### RoadRunner import error
 
@@ -333,10 +333,10 @@ If Python cannot import `roadrunner`, install the appropriate RoadRunner package
 
 Check that:
 
-- the correct parameter names exist in the XML model
-- the parameter updates are being applied before simulation
+- The correct parameter names exist in the XML model
+- The parameter updates are being applied before simulation
 - `TNF_R` is being switched on and off correctly
-- the selected output species is `NFKB_nuc`
+- The selected output species is `NFKB_nuc`
 
 ### Different values than expected
 
